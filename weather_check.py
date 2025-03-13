@@ -98,7 +98,7 @@ def find_weather_data(temperatureDataDict,windDataDict,wind_speed,min,max):
 def publish_to_sns(message):
     sns = boto3.client('sns')
     return sns.publish(
-        TopicArn='arn:aws:sns:us-east-1:993019632105:WeatherNotification',
+        TopicArn='arn:aws:sns:us-east-1:123456789012:WeatherNotification',
         Message=json.dumps({'default': json.dumps(message)}),
         MessageStructure='json'
     )

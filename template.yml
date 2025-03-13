@@ -54,14 +54,14 @@ Resources:
             - Effect: Allow
               Action:
                 - logs:CreateLogGroup
-              Resource: arn:aws:logs:us-east-1:993019632105:*
+              Resource: arn:aws:logs:us-east-1:123456789012:*
             - Effect: Allow
               Action:
                 - logs:CreateLogStream
                 - logs:PutLogEvents
               Resource:
                 - >-
-                  arn:aws:logs:us-east-1:993019632105:log-group:/aws/lambda/SNSTest:*
+                  arn:aws:logs:us-east-1:123456789012:log-group:/aws/lambda/SNSTest:*
       RecursiveLoop: Terminate
       SnapStart:
         ApplyOn: None
