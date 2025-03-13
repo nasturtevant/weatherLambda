@@ -19,8 +19,6 @@ def clean_message(data):
     message = "Low temps incoming: "
     dataList = ""
     for d in data:
-        #dataList = "<<<" + dataList + " " + str(d["Temperature"]) + " "
-        #dataList = dataList + " " + str(d["Time"]) + ">>>        "
         dataList = dataList + str(d)
     return message + str(dataList)
 
@@ -55,7 +53,6 @@ def load_weather_data(data):
         temperatureDataDict[stringTime] = temperature
         windDataDict[stringTime] = wind
 
-    # logger.debug(f"Wind Data: {windDataDict.items()}")
     return temperatureDataDict,windDataDict
 
 def find_weather_data(temperatureDataDict,windDataDict,wind_speed,min,max):
@@ -95,6 +92,7 @@ def find_weather_data(temperatureDataDict,windDataDict,wind_speed,min,max):
 
     return weatherData
 
+
 def publish_to_sns(message):
     sns = boto3.client('sns')
     return sns.publish(
@@ -109,12 +107,7 @@ def lambda_handler(event, context):
     logger.info(f"Config: {config.sections()}")
     props = config['default']
 
-    # weatherResp = get_weather(props.get('api_key'), props.get('lat'), props.get('lon'), props.get('units'))
     weatherResp = get_weather(props)
     
 
-    # if len(weatherResp) > 0:
-    #     resp = clean_message(weatherResp)
-    #     return publish_to_sns(resp)
-    # else:
-    #     return weatherResp
+### TODO: Add the publish_to_sns function here
