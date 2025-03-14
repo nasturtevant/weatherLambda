@@ -1,5 +1,5 @@
 <h1 align="center">Hello! I'm Nathan</h1>
-<h3 align="center">I am a Platform Engineer with 10 years experience in AWS, Linux, AWS, Python, and most recently Go. I love using code to get things done faster and easier. Always looking for a new way to use a Raspberry Pi.</h3>
+<h3 align="center">I am a Platform Engineer with 10 years experience in AWS, Linux, Python, and most recently Go. I love using code to get things done faster and easier. Always looking for a new way to use a Raspberry Pi.</h3>
 
 - 🔭 I’m currently working on the [WeatherLambda](https://github.com/nasturtevant/weatherLambda)
 
